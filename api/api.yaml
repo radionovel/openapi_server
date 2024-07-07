@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: OpenAI API oGen learinig
+  description: API for testing ogen features
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8800
+paths:
+  /items/{slug}:
+    get:
+      operationId: getItem
+      summary: get some item by slug
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: number
+                  name:
+                    type: string
